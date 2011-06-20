@@ -20,3 +20,8 @@ gem 'data_mapper'
 gem 'padrino', "0.9.29"
 # Padrino EDGE
 # gem 'padrino', :git => "git://github.com/padrino/padrino-framework.git"
+
+# Gems for production environment
+group :production do
+	gem 'pg'
+end
