@@ -23,5 +23,6 @@ gem 'padrino', "0.9.29"
 
 # Gems for production environment
 group :production do
+	gem 'dm-postgres-adapter'
 	gem 'pg'
 end
