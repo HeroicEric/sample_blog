@@ -14,6 +14,6 @@ DataMapper::Property::String.length(255)
 
 case Padrino.env
   when :development then DataMapper.setup(:default, "sqlite3://" + Padrino.root('db', "sample_blog_development.db"))
-  when :production  then DataMapper.setup(:default, "postgresql://" + postgres.user + ":" + postgres.password + "@" + postgres.host + "/" + postgres.user)
+  when :production  then DataMapper.setup(:default, ENV['DATABASE_URL'])
   when :test        then DataMapper.setup(:default, "sqlite3://" + Padrino.root('db', "sample_blog_test.db"))
 end
